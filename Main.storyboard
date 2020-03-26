@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Name_That_Breed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EB4-UE-arB" userLabel="Flashcard Image View">
+                                <rect key="frame" x="49" y="127" width="314" height="375"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twF-fx-0sT">
+                                <rect key="frame" x="282" y="533" width="81" height="33"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="NextButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FTl-sE-MVR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TJu-79-H1h" userLabel="Flip Card Button">
+                                <rect key="frame" x="49" y="533" width="99" height="32.5"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="See Answer">
+                                            <attributes>
+                                                <font key="NSFont" metaFont="system" size="17"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="AnswerButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="seq-ID-bqN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mq9-Qk-24e" userLabel="Answer Label">
+                                <rect key="frame" x="19" y="56" width="376" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2Yh-j8-VWY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What type of dog is this?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfR-VI-XPP">
+                                <rect key="frame" x="112" y="57" width="190.5" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.95607590229999995" blue="0.98451243070000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EB4-UE-arB" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="1IZ-SR-WL9"/>
+                            <constraint firstItem="twF-fx-0sT" firstAttribute="top" secondItem="EB4-UE-arB" secondAttribute="bottom" constant="31" id="4ch-gQ-umD"/>
+                            <constraint firstItem="TJu-79-H1h" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="29" id="9fR-am-DRJ"/>
+                            <constraint firstItem="EB4-UE-arB" firstAttribute="top" secondItem="mq9-Qk-24e" secondAttribute="bottom" constant="31" id="Ef1-vz-6eY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="twF-fx-0sT" secondAttribute="trailing" constant="31" id="INh-aZ-Sb0"/>
+                            <constraint firstItem="mq9-Qk-24e" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="MNJ-wV-LPL"/>
+                            <constraint firstItem="TJu-79-H1h" firstAttribute="top" secondItem="EB4-UE-arB" secondAttribute="bottom" constant="31" id="ZxV-AS-L9z"/>
+                            <constraint firstItem="tfR-VI-XPP" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="a7e-VK-VKA"/>
+                            <constraint firstItem="mq9-Qk-24e" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-1" id="bfc-z6-XLM"/>
+                            <constraint firstItem="twF-fx-0sT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="262" id="j6z-Bb-yG4"/>
+                            <constraint firstItem="mq9-Qk-24e" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="12" id="kvs-GZ-FWf"/>
+                            <constraint firstItem="mq9-Qk-24e" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="12" id="mYX-MX-LBn"/>
+                            <constraint firstItem="tfR-VI-XPP" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="13" id="u1f-OD-hqW"/>
+                            <constraint firstItem="EB4-UE-arB" firstAttribute="top" secondItem="tfR-VI-XPP" secondAttribute="bottom" constant="31" id="xqx-5G-WNU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TJu-79-H1h" secondAttribute="trailing" constant="246" id="zfx-RP-o1j"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="AnswerLabel" destination="mq9-Qk-24e" id="4FE-T7-dHw"/>
+                        <outlet property="DefaultLabel" destination="tfR-VI-XPP" id="k0v-YY-Bso"/>
+                        <outlet property="FlashcardImageView" destination="EB4-UE-arB" id="H8I-pZ-ZLV"/>
+                        <outlet property="FlipCardButton" destination="TJu-79-H1h" id="O9Q-RC-DfJ"/>
+                        <outlet property="NextButton" destination="twF-fx-0sT" id="cxW-B6-eAv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33.333333333333336" y="30.803571428571427"/>
+        </scene>
+    </scenes>
+</document>
