@@ -33,7 +33,7 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         addBannerViewToView(bannerView)
         
         //Use this for ad testing
-        //bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        //bannerView.adUnitID = "bannerID"
         
         bannerView.adUnitID = "ad-unit-id"
         bannerView.rootViewController = self
